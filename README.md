@@ -8,7 +8,7 @@ This is a ready to use web application for managing Real Estate System. the appl
 
 Description
 
-It can easily be used to manage two different group of users with different permission level.User can find Property easily in particular and Specific Location,Loan Calculator, Admin can Manage all data , User can Add property etc.
+It can easily be used to manage two different group of users with different permission level.User can find Property easily in particular and Specific Location,Loan Calculator, Admin can Manage all data , User can Add property etc....
 
 # Requirements
 

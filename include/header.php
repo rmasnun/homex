@@ -37,8 +37,7 @@
 										
 										<li class="nav-item"> <a class="nav-link" href="about.php">About</a> </li>
 										
-										<li class="nav-item"> <a class="nav-link" href="agent.php">Agent</a> </li>
-										
+
 										<li class="nav-item"> <a class="nav-link" href="property.php">Properties</a> </li>
                                         <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a> </li>
 										
@@ -48,9 +47,9 @@
 											<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
 											<ul class="dropdown-menu">
 												<li class="nav-item"> <a class="nav-link" href="profile.php">Profile</a> </li>
-												<li class="nav-item"> <a class="nav-link" href="request.php">Property Request</a> </li>
+                                                <li class="nav-item"> <a class="nav-link" href="creditcard.php">Card info</a> </li>
 												<li class="nav-item"> <a class="nav-link" href="feature.php">Your Property</a> </li>
-												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>	
+												<li class="nav-item"> <a class="nav-link" href="logout.php">Logout</a> </li>
 											</ul>
                                         </li>
 										<?php } else { ?>
@@ -60,7 +59,7 @@
                                     </ul>
                                     
 									
-									<a class="btn btn-primary d-none d-xl-block" href="submitproperty.php">Submit Property</a> 
+									<a class="btn btn-primary d-none d-xl-block" href="submitproperty.php">Submit Property</a>
                                 </div>
                             </nav>
                         </div>

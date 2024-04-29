@@ -153,7 +153,7 @@ if(isset($_POST['insert']))
 								?>
                                 <div class="user-info mt-md-50"> <img src="admin/user/<?php echo $row['6'];?>" alt="userimage">
                                     <div class="mb-4 mt-3">
-                                        
+
                                     </div>
 									
                                     <div class="font-18">

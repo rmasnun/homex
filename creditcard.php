@@ -5,13 +5,13 @@ session_start();
 include("config.php");
 $error="";
 $msg="";
-if(isset($_REQUEST['add']))
+if(isset($_POST['add']))
 {
-	$cardNumber=$_REQUEST['cardNumber'];
-	$expiryDate=$_REQUEST['expiryDate'];
-	$cvv=$_REQUEST['cvv'];
-	$billingAddress=$_REQUEST['billingAddress'];
-	$phoneNumber=$_REQUEST['phoneNumber'];
+	$cardNumber=$_POST['cardNumber'];
+	$expiryDate=$_POST['expiryDate'];
+	$cvv=$_POST['cvv'];
+	$billingAddress=$_POST['billingAddress'];
+	$phoneNumber=$_POST['phoneNumber'];
   $userid = $_SESSION['uid'];
 
 	$query = "SELECT * FROM cards where cardNumber='$cardNumber'";
@@ -28,7 +28,7 @@ if(isset($_REQUEST['add']))
 		if(!empty($cardNumber) && !empty($expiryDate) && !empty($cvv) && !empty($billingAddress) && !empty($phoneNumber))
 		{
 
-			$sql="INSERT INTO cards (ucardNumber, userid, uexpiryDate,ucvv,ubillingAddress,utype,uphoneNumber) VALUES ('$cardNumber', '$userid', '$expiryDate','$cvv','$billingAddress','$utype','$phoneNumber')";
+			$sql="INSERT INTO cards (cardNumber, userid, expiryDate,cvv,billingAddress, phoneNumber) VALUES ('$cardNumber', '$userid', '$expiryDate','$cvv','$billingAddress', '$phoneNumber')";
 			$result=mysqli_query($con, $sql);
 			   if($result){
 				   $msg = "<p class='alert alert-success'>Card Added Successfully</p> ";
@@ -119,7 +119,7 @@ if(isset($_REQUEST['add']))
         </div>
          <!--	Banner   --->
 
-
+  <?php include("include/displayCards.php");?>
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -130,7 +130,7 @@ if(isset($_REQUEST['add']))
               <div class="form-group">
                 <label for="cardNumber">Card Number</label>
                 <input name="cardNumber" type="text" class="form-control" id="cardNumber" placeholder="Enter card number" autocomplete="off">
-                <small id="cardType" class="form-text text-muted"></small>
+                <small name="cardType" id="cardType" class="form-text text-muted"></small>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
