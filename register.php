@@ -77,7 +77,7 @@ if(isset($_REQUEST['reg']))
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title>PropertyHub - Real Estate Template</title>
 </head>
 <body>
 
@@ -175,16 +175,7 @@ if(isset($_REQUEST['reg']))
 									<span class="span-or">or</span>
 								</div>
 								
-								<!-- Social Login -->
-								<div class="social-login">
-									<span>Register with</span>
-									<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-									<a href="#" class="google"><i class="fab fa-google"></i></a>
-									<a href="#" class="facebook"><i class="fab fa-twitter"></i></a>
-									<a href="#" class="google"><i class="fab fa-instagram"></i></a>
-								</div>
-								<!-- /Social Login -->
-								
+
 								<div class="text-center dont-have">Already have an account? <a href="login.php">Login</a></div>
 								
 							</div>

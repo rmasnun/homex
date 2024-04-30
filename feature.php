@@ -41,7 +41,7 @@ if(!isset($_SESSION['uemail']))
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title>PropertyHub - Real Estate Template</title>
 </head>
 <body>
 

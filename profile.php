@@ -69,7 +69,7 @@ if(isset($_POST['insert']))
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title>PropertyHub - Real Estate Template</title>
 </head>
 <body>
 

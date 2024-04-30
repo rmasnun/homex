@@ -37,7 +37,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>Homex - Real Estate Template</title>
+<title>PropertyHub - Real Estate Template</title>
 </head>
 <body>
 
@@ -63,8 +63,8 @@ include("config.php");
                 <div class="row h-100 align-items-center">
                     <div class="col-lg-12">
                         <div class="text-white">
-                            <h1 class="mb-4"><span class="text-primary">Find</span><br>
-                                Your dream house</h1>
+                            <h1 class="mb-4"><span class="text-primary">Discover</span><br>
+                                Your ideal home</h1>
                             <form method="post" action="propertygrid.php">
                                 <div class="row">
                                     <div class="col-md-6 col-lg-2">
@@ -119,14 +119,14 @@ include("config.php");
                 <div class="text-box-one">
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
-                            <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s"> 
+                            <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s">
 								<i class="flaticon-rent text-primary flat-medium" aria-hidden="true"></i>
                                 <h5 class="text-secondary hover-text-primary py-3 m-0"><a href="#">Selling Service</a></h5>
                                 <p>Lacinia tempor tortor nibh. Et mattis cubilia suspendisse cras justo potenti.</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s"> 
+                            <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s">
 								<i class="flaticon-for-rent text-primary flat-medium" aria-hidden="true"></i>
                                 <h5 class="text-secondary hover-text-primary py-3 m-0"><a href="#">Rental Service</a></h5>
                                 <p>Lacinia tempor tortor nibh. Et mattis cubilia suspendisse cras justo potenti.</p>
@@ -151,6 +151,74 @@ include("config.php");
             </div>
         </div>
 		<!-----  Our Services  ---->
+
+                <!--	Achievement
+        ============================================================-->
+        <div class="full-row overlay-secondary" style="background-image: url('images/counterbg.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+            <div class="container">
+                <div class="fact-counter">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
+								<?php
+										$query=mysqli_query($con,"SELECT count(pid) FROM property");
+											while($row=mysqli_fetch_array($query))
+												{
+										?>
+                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php
+												$total = $row[0];
+												echo $total;?>">0</div>
+								<?php } ?>
+                                <div class="text-white h5">Properties on this platform</div>
+                            </div>
+                        </div>
+						<div class="col-md-3">
+                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
+								<?php
+										$query=mysqli_query($con,"SELECT count(pid) FROM property where stype='sale'");
+											while($row=mysqli_fetch_array($query))
+												{
+										?>
+                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php
+												$total = $row[0];
+												echo $total;?>">0</div>
+								<?php } ?>
+                                <div class="text-white h5">Sale Property Available</div>
+                            </div>
+                        </div>
+						<div class="col-md-3">
+                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
+								<?php
+										$query=mysqli_query($con,"SELECT count(pid) FROM property where stype='rent'");
+											while($row=mysqli_fetch_array($query))
+												{
+										?>
+                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php
+												$total = $row[0];
+												echo $total;?>">0</div>
+								<?php } ?>
+                                <div class="text-white h5">Rent Property Available</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-man flat-large text-white" aria-hidden="true"></i>
+                                <?php
+										$query=mysqli_query($con,"SELECT count(uid) FROM user");
+											while($row=mysqli_fetch_array($query))
+												{
+										?>
+                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php
+												$total = $row[0];
+												echo $total;?>">0</div>
+								<?php } ?>
+                                <div class="text-white h5">Registered Users</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 		
         <!--	Recent Properties  -->
         <div class="full-row">
@@ -209,53 +277,16 @@ include("config.php");
 
                                 </div>
                             </div>
-                            
-                            
-                           
+
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 		<!--	Recent Properties  -->
-        
-        <!--	Why Choose Us -->
-        <div class="full-row living bg-one overlay-secondary-half" style="background-image: url('images/haddyliving.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="living-list pr-4">
-                            <h3 class="pb-4 mb-3 text-white">Why Choose Us</h3>
-                            <ul>
-                                <li class="mb-4 text-white d-flex"> 
-									<i class="flaticon-reward flat-medium float-left d-table mr-4 text-primary" aria-hidden="true"></i>
-									<div class="pl-2">
-										<h5 class="mb-3">Experience Quality</h5>
-										<p>Ad non vivamus Elementum eget fringilla venenatis quisque, maecenas adipiscing aliquet justo. Libero. Gravida. Sapien, dolor nostra sem. Rutrum conubia inceptos egestas dolor class.</p>
-									</div>
-                                </li>
-                                <li class="mb-4 text-white d-flex"> 
-									<i class="flaticon-real-estate flat-medium float-left d-table mr-4 text-primary" aria-hidden="true"></i>
-									<div class="pl-2">
-										<h5 class="mb-3">Experience Quality</h5>
-										<p>Ad non vivamus Elementum eget fringilla venenatis quisque, maecenas adipiscing aliquet justo. Libero. Gravida. Sapien, dolor nostra sem. Rutrum conubia inceptos egestas dolor class.</p>
-									</div>
-                                </li>
-                                <li class="mb-4 text-white d-flex"> 
-									<i class="flaticon-seller flat-medium float-left d-table mr-4 text-primary" aria-hidden="true"></i>
-									<div class="pl-2">
-										<h5 class="mb-3">Experience Quality</h5>
-										<p>Ad non vivamus Elementum eget fringilla venenatis quisque, maecenas adipiscing aliquet justo. Libero. Gravida. Sapien, dolor nostra sem. Rutrum conubia inceptos egestas dolor class.</p>
-									</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-		<!--	why choose us -->
-		
+
 		<!--	How it work -->
         <div class="full-row">
             <div class="container">
@@ -292,77 +323,9 @@ include("config.php");
                 </div>
             </div>
         </div>
-        
-        <!--	How It Work -->
-        
-        <!--	Achievement
-        ============================================================-->
-        <div class="full-row overlay-secondary" style="background-image: url('images/counterbg.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-            <div class="container">
-                <div class="fact-counter">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
-								<?php
-										$query=mysqli_query($con,"SELECT count(pid) FROM property");
-											while($row=mysqli_fetch_array($query))
-												{
-										?>
-                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php 
-												$total = $row[0];
-												echo $total;?>">0</div>
-								<?php } ?>
-                                <div class="text-white h5">Properties on this platform</div>
-                            </div>
-                        </div>
-						<div class="col-md-3">
-                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
-								<?php
-										$query=mysqli_query($con,"SELECT count(pid) FROM property where stype='sale'");
-											while($row=mysqli_fetch_array($query))
-												{
-										?>
-                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php 
-												$total = $row[0];
-												echo $total;?>">0</div>
-								<?php } ?>
-                                <div class="text-white h5">Sale Property Available</div>
-                            </div>
-                        </div>
-						<div class="col-md-3">
-                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-house flat-large text-white" aria-hidden="true"></i>
-								<?php
-										$query=mysqli_query($con,"SELECT count(pid) FROM property where stype='rent'");
-											while($row=mysqli_fetch_array($query))
-												{
-										?>
-                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php 
-												$total = $row[0];
-												echo $total;?>">0</div>
-								<?php } ?>
-                                <div class="text-white h5">Rent Property Available</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="count wow text-center  mb-sm-50" data-wow-duration="300ms"> <i class="flaticon-man flat-large text-white" aria-hidden="true"></i>
-                                <?php
-										$query=mysqli_query($con,"SELECT count(uid) FROM user");
-											while($row=mysqli_fetch_array($query))
-												{
-										?>
-                                <div class="count-num text-primary my-4" data-speed="3000" data-stop="<?php 
-												$total = $row[0];
-												echo $total;?>">0</div>
-								<?php } ?>
-                                <div class="text-white h5">Registered Users</div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+        <!--	How It Work -->
+
         <!--	Popular Place -->
         <div class="full-row bg-gray">
             <div class="container">
